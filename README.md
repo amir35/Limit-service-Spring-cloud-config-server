@@ -12,4 +12,6 @@ Using this endpoint we are getting values from application.properties file.
 2: Spring-cloud-config-server
 We have created a config server for limits-service project.
 
+http://localhost:8888/limits-service/default
+
 I have put the limits-service.properties file in Github repo and calling the property from there which is getting reflected in limits-service.
