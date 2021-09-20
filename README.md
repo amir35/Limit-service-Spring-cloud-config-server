@@ -15,3 +15,5 @@ We have created a config server for limits-service project.
 http://localhost:8888/limits-service/default
 
 I have put the limits-service.properties file in Github repo and calling the property from there which is getting reflected in limits-service.
+
+Follow the steps from here: https://amirahmad786.blogspot.com/2021/09/spring-cloud-config-server-with-github.html
