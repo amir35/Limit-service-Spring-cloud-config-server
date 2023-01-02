@@ -14,11 +14,24 @@ public class LimitsController {
 	
 	@Autowired
 	private Configuration configuration;
-	
+
+	@GetMapping("/limits/hardcode")
+	public Limits retrieveLimitsFromConfigurationsHardCode() {
+		return new Limits(1000, 1);
+	}
+
+
 	@GetMapping("/limits")
-	public Limits retrieveLimits() {
+	public Limits retrieveLimitsFromConfigurations() {
+
+		//getting values from the properties file
+		return new Limits(configuration.getMaximum(), configuration.getMinimum());
+	}
+
+
+	@GetMapping("/limits/configserver")
+	public Limits retrieveLimitsFromConfigServer() {
 		return new Limits(configuration.getMinimum(),configuration.getMaximum());
-		//return new Limits(1,1000);
 	}
 
 }
